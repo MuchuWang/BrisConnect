@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View static prototype examples of BrisConnect community story cards.">
+  <title>Community Voices | BrisConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&amp;family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicons/brisconnect-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="BrisConnect home">
+        <span class="brand__mark" aria-hidden="true">BC</span>
+        <span>BrisConnect</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="community.html" aria-current="page">Community</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--compact">
+      <div class="container">
+        <h1 class="page-title">Community voices</h1>
+        <p>This page uses static prototype content to demonstrate the front-end display that replaced the original private course API integration.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="voices-heading">
+      <div class="container">
+        <div class="filter-card">
+          <h2 class="section-title" id="voices-heading">Story examples</h2>
+          <p class="lede">Filter the example cards by category. These examples are not stored submissions.</p>
+          <div class="filter-pills" role="group" aria-label="Story category">
+            <button class="pill" type="button" data-category="all" aria-pressed="true">All</button>
+            <button class="pill" type="button" data-category="Volunteering" aria-pressed="false">Volunteering</button>
+            <button class="pill" type="button" data-category="Learning" aria-pressed="false">Learning</button>
+            <button class="pill" type="button" data-category="Events" aria-pressed="false">Events</button>
+          </div>
+          <p id="community-status" class="results-count" aria-live="polite">Loading community examples...</p>
+        </div>
+
+        <div id="community-list" class="grid grid--3 section" aria-live="polite"></div>
+        <div id="community-empty" class="empty-state" hidden>No examples match this category.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>BrisConnect</h2>
+          <p>A responsive academic front-end prototype focused on community participation, accessibility and clear information architecture.</p>
+        </section>
+        <section>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contribute.html">Contribute</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Project</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="README.md">README</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-meta">&copy; <span id="year">2026</span> BrisConnect portfolio project.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/community.js"></script>
+</body>
+</html>

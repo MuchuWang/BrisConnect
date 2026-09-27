@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Park care morning",
+    "category": "Volunteering",
+    "image": "assets/images/story-volunteers.jpg",
+    "alt": "Volunteer wearing a shirt at a community event",
+    "summary": "Prototype story content showing how a volunteer-focused community contribution would be presented after review."
+  },
+  {
+    "title": "Shared skills circle",
+    "category": "Learning",
+    "image": "assets/images/story-hands.jpg",
+    "alt": "Hands stacked together in a circle of collaboration",
+    "summary": "Prototype story content about residents sharing practical skills, tools and local knowledge."
+  },
+  {
+    "title": "Open hall gathering",
+    "category": "Events",
+    "image": "assets/images/story-auditorium.jpg",
+    "alt": "People attending a community gathering in a brightly lit hall",
+    "summary": "Prototype story content demonstrating how event reflections could help visitors understand community impact."
+  }
+]

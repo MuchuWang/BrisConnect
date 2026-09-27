@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Filter prototype community resources by keyword, type and local relevance in the BrisConnect portfolio project.">
+  <title>Resources | BrisConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&amp;family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicons/brisconnect-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="BrisConnect home">
+        <span class="brand__mark" aria-hidden="true">BC</span>
+        <span>BrisConnect</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html" aria-current="page">Resources</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--compact">
+      <div class="container">
+        <h1 class="page-title">Resources for inclusive community action</h1>
+        <p>Discover guides, workshops, funding notes and policy references curated for community initiatives.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="resource-filter-heading">
+      <div class="container">
+        <h2 id="resource-filter-heading" class="sr-only">Filter resources</h2>
+        <form id="resource-filters" class="filter-card" role="search" aria-label="Filter community resources" novalidate>
+          <div class="field">
+            <label for="search-resources">Search resources</label>
+            <input id="search-resources" name="query" type="search" autocomplete="off" placeholder="Try accessibility, funding or policy">
+          </div>
+
+          <div class="filter-pills" role="group" aria-label="Resource type">
+            <button class="pill" type="button" data-type="all" aria-pressed="true">All</button>
+            <button class="pill" type="button" data-type="guide" aria-pressed="false">Guides</button>
+            <button class="pill" type="button" data-type="workshop" aria-pressed="false">Workshops</button>
+            <button class="pill" type="button" data-type="funding" aria-pressed="false">Funding</button>
+            <button class="pill" type="button" data-type="policy" aria-pressed="false">Policies</button>
+          </div>
+
+          <div class="actions">
+            <label class="checkbox-row">
+              <input id="local-only" type="checkbox">
+              Show local-only
+            </label>
+            <button class="btn btn--primary" type="submit">Apply filters</button>
+            <button class="btn btn--quiet" type="button" id="clear-resource-filters">Clear filters</button>
+          </div>
+          <p id="resource-results-count" class="results-count" aria-live="polite"></p>
+        </form>
+
+        <p id="resource-preview" class="resource-note" role="status" aria-live="polite"></p>
+        <div id="resources-empty" class="empty-state" hidden>No resources match your filters. Try a broader search or another category.</div>
+
+        <section class="section" aria-labelledby="resource-results-heading">
+          <h2 id="resource-results-heading" class="sr-only">Resource results</h2>
+          <div id="resources-grid" class="grid grid--2">
+            <article class="card resource-card" data-title="Community Engagement Guide for Local Leaders" data-type="guide" data-local="true">
+              <h3>Community Engagement Guide for Local Leaders</h3>
+              <p>A planning guide for inclusive community programs, with prompts for goals, access needs and evaluation.</p>
+              <ul class="meta">
+                <li><span class="tag">Guide</span></li>
+                <li><span class="tag tag--blue">15 min</span></li>
+                <li><span class="tag tag--neutral">Local</span></li>
+              </ul>
+              <div class="resource-actions">
+                <button class="btn btn--outline" type="button" data-preview="Community Engagement Guide for Local Leaders">Preview details</button>
+              </div>
+            </article>
+
+            <article class="card resource-card" data-title="Facilitating Inclusive Workshops" data-type="workshop" data-local="false">
+              <h3>Facilitating Inclusive Workshops</h3>
+              <p>Workshop facilitation techniques for accessible rooms, plain language prompts and balanced participation.</p>
+              <ul class="meta">
+                <li><span class="tag">Workshop</span></li>
+                <li><span class="tag tag--blue">2 hours</span></li>
+                <li><span class="tag tag--neutral">Video notes</span></li>
+              </ul>
+              <div class="resource-actions">
+                <button class="btn btn--outline" type="button" data-preview="Facilitating Inclusive Workshops">Preview details</button>
+              </div>
+            </article>
+
+            <article class="card resource-card" data-title="Small Grants Program" data-type="funding" data-local="true">
+              <h3>Small Grants Program</h3>
+              <p>Prototype funding information for grassroots ideas, eligibility planning and application preparation.</p>
+              <ul class="meta">
+                <li><span class="tag">Funding</span></li>
+                <li><span class="tag tag--neutral">Local</span></li>
+              </ul>
+              <div class="resource-actions">
+                <button class="btn btn--outline" type="button" data-preview="Small Grants Program">Preview details</button>
+              </div>
+            </article>
+
+            <article class="card resource-card" data-title="Brisbane Community Action Policy Framework" data-type="policy" data-local="true">
+              <h3>Brisbane Community Action Policy Framework</h3>
+              <p>Policy-oriented guidance for community-led projects, roles, permissions and support pathways.</p>
+              <ul class="meta">
+                <li><span class="tag">Policy</span></li>
+                <li><span class="tag tag--blue">20 min</span></li>
+                <li><span class="tag tag--neutral">Local</span></li>
+              </ul>
+              <div class="resource-actions">
+                <button class="btn btn--outline" type="button" data-preview="Brisbane Community Action Policy Framework">Preview details</button>
+              </div>
+            </article>
+
+            <article class="card resource-card" data-title="Digital Tools for Community Organisers" data-type="guide" data-local="false">
+              <h3>Digital Tools for Community Organisers</h3>
+              <p>A comparison of low-cost tools for event planning, communication and lightweight project coordination.</p>
+              <ul class="meta">
+                <li><span class="tag">Guide</span></li>
+                <li><span class="tag tag--blue">10 min</span></li>
+                <li><span class="tag tag--neutral">HTML</span></li>
+              </ul>
+              <div class="resource-actions">
+                <button class="btn btn--outline" type="button" data-preview="Digital Tools for Community Organisers">Preview details</button>
+              </div>
+            </article>
+
+            <article class="card resource-card" data-title="Conflict Resolution in Community Groups" data-type="workshop" data-local="false">
+              <h3>Conflict Resolution in Community Groups</h3>
+              <p>Practical techniques for navigating disagreement, documenting decisions and rebuilding trust.</p>
+              <ul class="meta">
+                <li><span class="tag">Workshop</span></li>
+                <li><span class="tag tag--blue">90 min</span></li>
+                <li><span class="tag tag--neutral">Video notes</span></li>
+              </ul>
+              <div class="resource-actions">
+                <button class="btn btn--outline" type="button" data-preview="Conflict Resolution in Community Groups">Preview details</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>BrisConnect</h2>
+          <p>A responsive academic front-end prototype focused on community participation, accessibility and clear information architecture.</p>
+        </section>
+        <section>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contribute.html">Contribute</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Project</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="README.md">README</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-meta">&copy; <span id="year">2026</span> BrisConnect portfolio project.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/resources.js"></script>
+</body>
+</html>

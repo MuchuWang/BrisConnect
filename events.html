@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter prototype community events in the BrisConnect front-end project.">
+  <title>Events | BrisConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&amp;family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicons/brisconnect-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="BrisConnect home">
+        <span class="brand__mark" aria-hidden="true">BC</span>
+        <span>BrisConnect</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--compact">
+      <div class="container">
+        <h1 class="page-title">Community events</h1>
+        <p>Search by keyword, browse event types and filter for free activities.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="event-filter-heading">
+      <div class="container">
+        <h2 id="event-filter-heading" class="sr-only">Filter events</h2>
+        <form id="event-filters" class="filter-card" role="search" aria-label="Filter community events" novalidate>
+          <div class="filter-row">
+            <div class="field">
+              <label for="search-events">Search events</label>
+              <input id="search-events" name="query" type="search" autocomplete="off" placeholder="Try workshop, garden or youth">
+            </div>
+            <div class="field">
+              <label for="event-category">Category</label>
+              <select id="event-category" name="category">
+                <option value="all">All categories</option>
+                <option value="environment">Environment</option>
+                <option value="arts">Arts</option>
+                <option value="learning">Learning</option>
+                <option value="family">Family</option>
+              </select>
+            </div>
+            <label class="checkbox-row">
+              <input id="free-only" name="free" type="checkbox">
+              Free only
+            </label>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" type="submit">Apply filters</button>
+            <button class="btn btn--quiet" type="button" id="clear-event-filters">Clear filters</button>
+          </div>
+          <p id="event-results-count" class="results-count" aria-live="polite"></p>
+        </form>
+
+        <div id="events-empty" class="empty-state" hidden>No events match your filters. Try clearing the search or changing category.</div>
+
+        <section class="section" aria-labelledby="event-results-heading">
+          <h2 id="event-results-heading" class="sr-only">Event results</h2>
+          <div id="events-grid" class="grid grid--3">
+            <article class="card event-card" data-title="Community Garden Workshop" data-category="environment" data-free="true">
+              <h3>Community Garden Workshop</h3>
+              <p>Learn sustainable gardening techniques and plant seasonal vegetables with neighbours.</p>
+              <ul class="meta">
+                <li><time datetime="2026-10-18T10:00:00">18 Oct 2026</time></li>
+                <li>10:00 am</li>
+                <li>Central Park</li>
+              </ul>
+              <span class="tag tag--free">Free</span>
+            </article>
+
+            <article class="card event-card" data-title="Local Artist Exhibition Opening" data-category="arts" data-free="false">
+              <h3>Local Artist Exhibition Opening</h3>
+              <p>Meet local artists, view community works and share an evening of creative connection.</p>
+              <ul class="meta">
+                <li><time datetime="2026-10-20T18:00:00">20 Oct 2026</time></li>
+                <li>6:00 pm</li>
+                <li>Arts Centre</li>
+              </ul>
+              <span class="tag tag--neutral">$8 entry</span>
+            </article>
+
+            <article class="card event-card" data-title="Neighbourhood Clean-up Day" data-category="environment" data-free="true">
+              <h3>Neighbourhood Clean-up Day</h3>
+              <p>Bring gloves and join a morning of local care, practical action and connection.</p>
+              <ul class="meta">
+                <li><time datetime="2026-10-22T09:00:00">22 Oct 2026</time></li>
+                <li>9:00 am</li>
+                <li>Main Street</li>
+              </ul>
+              <span class="tag tag--free">Free</span>
+            </article>
+
+            <article class="card event-card" data-title="Coding for Beginners" data-category="learning" data-free="true">
+              <h3>Coding for Beginners</h3>
+              <p>A beginner-friendly web workshop for residents who want to build digital confidence.</p>
+              <ul class="meta">
+                <li><time datetime="2026-10-25T14:00:00">25 Oct 2026</time></li>
+                <li>2:00 pm</li>
+                <li>Library Hall</li>
+              </ul>
+              <span class="tag tag--free">Free</span>
+            </article>
+
+            <article class="card event-card" data-title="Jazz in the Park" data-category="arts" data-free="true">
+              <h3>Jazz in the Park</h3>
+              <p>Enjoy a relaxed evening of live music. Bring a blanket, picnic and friends.</p>
+              <ul class="meta">
+                <li><time datetime="2026-10-27T19:00:00">27 Oct 2026</time></li>
+                <li>7:00 pm</li>
+                <li>Riverside Park</li>
+              </ul>
+              <span class="tag tag--free">Free</span>
+            </article>
+
+            <article class="card event-card" data-title="Youth Sports Day" data-category="family" data-free="true">
+              <h3>Youth Sports Day</h3>
+              <p>Sports stations, skill games and low-pressure activities for young people aged 8 to 16.</p>
+              <ul class="meta">
+                <li><time datetime="2026-10-29T13:00:00">29 Oct 2026</time></li>
+                <li>1:00 pm</li>
+                <li>Sports Complex</li>
+              </ul>
+              <span class="tag tag--free">Free</span>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>BrisConnect</h2>
+          <p>A responsive academic front-end prototype focused on community participation, accessibility and clear information architecture.</p>
+        </section>
+        <section>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contribute.html">Contribute</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Project</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="README.md">README</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-meta">&copy; <span id="year">2026</span> BrisConnect portfolio project.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/events.js"></script>
+</body>
+</html>

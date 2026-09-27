@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Try the BrisConnect contribution form prototype with accessible validation and local-only demo feedback.">
+  <title>Contribute | BrisConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&amp;family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicons/brisconnect-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="BrisConnect home">
+        <span class="brand__mark" aria-hidden="true">BC</span>
+        <span>BrisConnect</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contribute.html" aria-current="page">Contribute</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--compact">
+      <div class="container">
+        <h1 class="page-title">Contribute your story</h1>
+        <p>Share an experience, idea or local initiative through the prototype form. This portfolio version validates the interaction but does not send or store submissions.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-layout">
+        <div>
+          <form id="community-form" class="form-card" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <small id="help-name">Your first name or preferred name</small>
+              <input id="name" name="name" type="text" autocomplete="name" aria-describedby="help-name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <small id="help-email">Used only for validation feedback in this static portfolio demo</small>
+              <input id="email" name="email" type="email" autocomplete="email" aria-describedby="help-email" required>
+            </div>
+
+            <div class="field">
+              <label for="story-title">Story title</label>
+              <small id="help-title">A short title that summarises your story</small>
+              <input id="story-title" name="story_title" type="text" minlength="4" aria-describedby="help-title" required>
+            </div>
+
+            <div class="field">
+              <label for="story-content">Your story</label>
+              <small id="help-content">Minimum 20 characters, maximum 600 characters</small>
+              <textarea id="story-content" name="story" minlength="20" maxlength="600" rows="6" aria-describedby="help-content char-count" required></textarea>
+              <small id="char-count" aria-live="polite">0/600</small>
+            </div>
+
+            <div class="field">
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="events">Events</option>
+                <option value="workshops">Workshops</option>
+                <option value="accessibility">Accessibility</option>
+                <option value="safety">Safety</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <span id="photo-label">Photo (optional)</span>
+              <small id="help-photo">Image files only, maximum 5 MB</small>
+              <input id="photo-upload" name="photo" type="file" accept="image/*" hidden>
+              <button id="dropzone" class="dropzone" type="button" aria-labelledby="photo-label" aria-describedby="help-photo selected-file">
+                <span class="dropzone__text">Drop a photo here or click to browse</span>
+                <span id="selected-file" class="dropzone__hint">No file selected</span>
+              </button>
+            </div>
+
+            <label class="checkbox-row">
+              <input id="consent" name="consent" type="checkbox" required>
+              I agree to share this story in the BrisConnect prototype interface.
+            </label>
+
+            <div class="actions form-actions">
+              <button class="btn btn--primary" type="submit">Submit story</button>
+              <button class="btn btn--outline" type="reset">Reset form</button>
+            </div>
+
+            <p id="form-feedback" class="feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="sidebar" aria-labelledby="contribute-notes">
+          <div class="card">
+            <h2 id="contribute-notes">Data handling</h2>
+            <p>The original course API dependency has been removed for public deployment. This form now demonstrates client-side validation and feedback only.</p>
+          </div>
+          <div class="card">
+            <h2>Writing tips</h2>
+            <p>Use plain language, include useful context and avoid sharing private information about other people.</p>
+          </div>
+          <div class="card">
+            <h2>Accessibility</h2>
+            <p>Form controls include labels, helper text, live validation feedback and keyboard-operable file selection.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>BrisConnect</h2>
+          <p>A responsive academic front-end prototype focused on community participation, accessibility and clear information architecture.</p>
+        </section>
+        <section>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contribute.html">Contribute</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Project</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="README.md">README</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-meta">&copy; <span id="year">2026</span> BrisConnect portfolio project.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/contribute.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about BrisConnect, an academic responsive community platform prototype focused on inclusive civic participation.">
+  <title>About | BrisConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&amp;family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicons/brisconnect-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="BrisConnect home">
+        <span class="brand__mark" aria-hidden="true">BC</span>
+        <span>BrisConnect</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <h1>About BrisConnect</h1>
+          <p>BrisConnect is a coded academic community platform prototype for helping Brisbane residents discover events, resources and participation pathways.</p>
+        </div>
+        <div class="badge" aria-hidden="true">
+          <span>CCI</span>
+          <span>EST.</span>
+          <span>2025</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" aria-labelledby="mission-heading">
+      <div class="container">
+        <h2 class="section-title" id="mission-heading">Purpose and boundaries</h2>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Purpose</h3>
+            <p>Create accessible spaces for civic information, local events, community storytelling and practical participation.</p>
+          </article>
+          <article class="card">
+            <h3>Boundaries</h3>
+            <p>This is a front-end prototype. It does not replace emergency services, collect live public submissions or operate as a production community service.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="values-heading">
+      <div class="container">
+        <h2 class="section-title" id="values-heading">Values in practice</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Value</th>
+                <th scope="col">Design decision</th>
+                <th scope="col">Implemented element</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Visibility</td>
+                <td>Use warm, readable colours and clear page structure.</td>
+                <td>High contrast text, consistent headings and visible controls.</td>
+              </tr>
+              <tr>
+                <td>Narrative</td>
+                <td>Use image captions and plain summaries to give content context.</td>
+                <td>Story cards, descriptive alt text and resource summaries.</td>
+              </tr>
+              <tr>
+                <td>Respect</td>
+                <td>Keep language direct and avoid unnecessary jargon.</td>
+                <td>Plain-English page copy and labelled form controls.</td>
+              </tr>
+              <tr>
+                <td>Openness</td>
+                <td>Be transparent about prototype limits and data handling.</td>
+                <td>Static demo messaging and README documentation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" aria-labelledby="imagery-heading">
+      <div class="container">
+        <h2 class="section-title" id="imagery-heading">Imagery and tone</h2>
+        <p class="lede">The visual direction keeps the original warm BrisConnect identity while pairing imagery with explanatory captions.</p>
+        <div class="grid grid--2">
+          <figure class="figure-card">
+            <img src="assets/images/belonging.jpg" alt="Diverse community members smiling together" width="600" height="450" loading="lazy">
+            <figcaption><strong>Belonging:</strong> Warm human imagery supports the platform's connection-focused purpose.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/images/empowerment.jpg" alt="Multiple hands joined together in a circle" width="600" height="450" loading="lazy">
+            <figcaption><strong>Empowerment:</strong> Shared action is represented through simple collaborative imagery.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/images/accessibility.jpg" alt="A wheelchair ramp leading into a public building" width="600" height="450" loading="lazy">
+            <figcaption><strong>Accessibility:</strong> Access needs are treated as core design requirements.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/images/safety.jpg" alt="A clean and well-lit public park walkway at dusk" width="600" height="450" loading="lazy">
+            <figcaption><strong>Safety:</strong> Calm, legible spaces support trust and usability.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="accessibility-heading">
+      <div class="container narrow">
+        <h2 class="section-title" id="accessibility-heading">Accessibility approach</h2>
+        <div class="card">
+          <p>The project uses semantic landmarks, skip links, labelled forms, keyboard-operable controls, live result counts, clear focus styles, descriptive image alt text and responsive layouts. ARIA is used only where it supports dynamic status updates or pressed states.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>BrisConnect</h2>
+          <p>A responsive academic front-end prototype focused on community participation, accessibility and clear information architecture.</p>
+        </section>
+        <section>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contribute.html">Contribute</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Project</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="README.md">README</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-meta">&copy; <span id="year">2026</span> BrisConnect portfolio project.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
